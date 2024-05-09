@@ -3,4 +3,5 @@ flask
 pandas
 PyPDF2
 uvicorn
+gevent
 gunicorn
