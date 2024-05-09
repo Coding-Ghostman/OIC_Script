@@ -1,0 +1,4 @@
+pdfplumber
+flask
+pandas
+PyPDF2
