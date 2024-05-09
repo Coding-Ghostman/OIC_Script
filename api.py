@@ -17,9 +17,7 @@ def upload_file():
         pdf_data = base64.b64decode(request.json["file"])
         extracted_table_base64 = table_to_base64(pdf_data)
         invoice_base64 = split_pdf(pdf_data)
-        return json.dumps(
-            obj={"invoice": invoice_base64, "table": extracted_table_base64}
-        )
+        return {"invoice": invoice_base64, "table": extracted_table_base64}
     except Exception as e:
         return jsonify({"error": str(e)})
 
